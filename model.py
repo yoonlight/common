@@ -1,6 +1,6 @@
 from keras.models import Model
 from keras.utils.all_utils import plot_model
-from utils import checkdir
+from .utils import checkdir
 
 class Base(Model):
     def build_graph(self, inputs):

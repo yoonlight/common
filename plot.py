@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import datetime
-from utils import checkdir
+from .utils import checkdir
 
 
 def plot(x_len, y_loss, y_val_loss, y_test_loss):
