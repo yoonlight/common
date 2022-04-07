@@ -1,7 +1,10 @@
 import matplotlib.pyplot as plt
+import datetime
 
 
 def plot(x_len, y_loss, y_val_loss, y_test_loss):
+    date = datetime.datetime.now()
+    unix_time = datetime.datetime.timestamp(date)*1000
     plt.plot(x_len, y_val_loss, marker='.',
              c='red', label="Validation-set Loss")
     plt.plot(x_len, y_loss, marker='.', c='blue', label="Train-set Loss")
@@ -11,5 +14,5 @@ def plot(x_len, y_loss, y_val_loss, y_test_loss):
     plt.grid()
     plt.xlabel('epoch')
     plt.ylabel('loss')
-    plt.savefig(fname="result")
+    plt.savefig(fname=f"image/result-{unix_time}.png")
     plt.show()

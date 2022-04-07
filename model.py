@@ -9,4 +9,4 @@ class Base(Model):
         return self.build_graph(inputs).summary(expand_nested=expand_nested)
 
     def plot_model(self, inputs, expand_nested=True):
-        plot_model(self.build_graph(inputs), expand_nested=expand_nested)
+        plot_model(self.build_graph(inputs), expand_nested=expand_nested, to_file="image/model.png")
